@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Reader with Voice Control</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.313/pdf.min.js"></script>
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+</head>
+
+<body>
+    <div class="pdf-container">
+        <h1>PDF Reader with Voice Control</h1>
+        <input type="file" id="pdfInput" accept="application/pdf" />
+        <button id="readTextButton" disabled>Read Text</button>
+        <button id="stopTextButton" disabled>Stop Reading</button>
+        <button id="continueButton" disabled>Continue</button>
+
+        <label for="voiceSelect">Select Voice:</label>
+        <select id="voiceSelect">
+            <!-- Voices will be populated here -->
+        </select>
+
+        <label for="speedControl">Speed:</label>
+        <input type="range" id="speedControl" min="0.5" max="2.0" step="0.1" value="1" />
+
+        <div class="pdf-text" id="pdfText">
+            <!-- PDF text content will be displayed here -->
+        </div>
+        <div id="animationContainer"></div>
+    </div>
+    <audio id="backgroundAudio" src="close-up-161158.mp3" loop></audio>
+    <!-- Added audio element for background music -->
+    <script src="rwm.js "></script>
+</body>
+
+</html>
