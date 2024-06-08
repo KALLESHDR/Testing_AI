@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyword Based BGM with Text-to-Speech</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Keyword Based BGM with Text-to-Speech</h1>
+        <input type="file" id="fileInput" accept="application/pdf">
+        <textarea id="userInput" placeholder="PDF content will be displayed here..." readonly></textarea>
+        <button onclick="analyzeText()">Submit</button>
+        <p id="keywordCount"></p>
+        <audio id="bgMusic" loop>
+            <source id="audioSource" src="" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <button onclick="pauseMusic()">Pause Music</button>
+        <button onclick="continueMusic()">Continue Music</button>
+        <button onclick="stopMusic()">Stop Music</button>
+        <button onclick="stopReading()">Stop Reading</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.5.207/pdf.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
